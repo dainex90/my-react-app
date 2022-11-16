@@ -1,38 +1,158 @@
-.App {
-  text-align: center;
+body {
+    padding-bottom: 100%;
+    background-color: rgba(215, 215, 215, 0.176);
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#maintitletext {
+    position: relative;
+    display: inline-block;
+    color: rgba(50, 52, 53, 0.749);
+    margin-top: 3em;
+    margin-bottom: 1.0em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#personcontainer {
+    background-color: rgb(236, 244, 244);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+form {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 7em;
+    width: 25%;
+    background-color: rgb(248, 248, 246);
+    border-radius: 10px;
+    border-style: groove;
+    border-color: rgba(138, 137, 137, 0.212);
+    border-width: 1.0px;
 }
 
-.App-link {
-  color: #61dafb;
+footer {
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(42, 44, 45, 0.505);
+    color:  rgb(222, 223, 223);
+    padding: 1em;
+    font-size: small;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#addpersoninfo {
+    position: relative;
+    display: block;
+    font-family: cursive;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    color: rgba(50, 52, 53, 0.749);
+}
+
+/* What is this?*/
+#personlabel{
+    background-color: rgb(146, 21, 21);
+}
+
+#navbarcontainer {
+    position: relative;
+    display: inline-block;
+    right: 22%;
+    margin-top: 100px;
+    background-color: rgba(45, 48, 50, 0.749);
+    padding: 1.5em;
+    padding-bottom: 0px;
+    width: 33%;
+}
+
+#linkcontainer {
+    text-align: left;
+}
+
+.navbarlinks {
+    text-decoration: none;
+    color: rgba(183, 192, 192, 0.904);
+    padding: 0.25em;
+}
+
+.navbarlinks:hover {
+    color: rgb(237, 245, 245);
+}
+
+#socialmediacontainer {
+    position: relative;
+    display: inline-block;
+    left: 150%;
+}
+
+.socialmediaimgs {
+    padding: 2px;
+}
+
+#addbutton {
+    position: relative;
+    display:inline-block;
+    margin-top: 5em;
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-top: 1.0em;
+    padding-bottom: 1.0em;
+    color: rgba(88, 86, 86, 0.758);
+    background-color: #20ce0dbf;
+    border-radius: 7px;
+    border: 0em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    
+
+}
+
+#addbutton:hover {
+    cursor: pointer;
+    
+}
+
+.textinput {
+    color: rgba(60, 59, 59, 0.575);
+    font-size: small;
+    padding: 0.5em;
+    border-color: rgba(205, 206, 206, 0.537);
+    
+}
+
+#textinputname {
+    margin-right: 5px;
+}
+
+#textinputage {
+    margin-left: 5px;
+}
+
+#formborder {
+    position: relative;
+    display: inline-block;
+    margin-top: 50px;
+    left: 0;
+    width: 70%;
+    border-style: solid;
+    border-width: 0.1px;
+    border-color: rgba(172, 172, 172, 0.326);
+}
+
+#stripeeffect {
+    position: relative;
+    display: block;
+    border-style: groove;
+    border-color: rgba(162, 162, 162, 0.162);
+    border-width: 1px;
+    width: 20%;
+    left: 80em;
+    margin-top: 1.5em;
+}
+
+.miscfootercontent {
+    position: relative;
+    display: inline-block;
+    left: 30em;
+    font-size: smaller;
+    padding-left: 5em;
 }
