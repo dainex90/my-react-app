@@ -1,28 +1,39 @@
 body {
-    padding-bottom: 100%;
-    background-color: rgba(215, 215, 215, 0.176);
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: block;
+    padding-bottom: 20%;
+    background-color: rgba(212, 195, 195, 0.199);
     text-align: center;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-#maintitletext {
+h1, h2 {
     position: relative;
-    display: inline-block;
-    color: rgba(50, 52, 53, 0.749);
-    margin-top: 3em;
-    margin-bottom: 1.0em;
+    color: rgba(46, 46, 42, 0.781);
+}
+
+#linkcontainer {
+    position: relative;
+    display: inline-flex;
+    text-align: left;
+    right: 40%;
+    margin-top: 75px;
+    background-color: rgba(45, 43, 46, 0.582);
+    width: 20%;
+    border-radius: 10px;
 }
 
 #personcontainer {
     background-color: rgb(236, 244, 244);
 }
 
-form {
+#signinform {
     position: relative;
     display: inline-block;
+    top: 100px;
+    padding-top: 2em;
     padding-bottom: 7em;
-    width: 25%;
-    background-color: rgb(248, 248, 246);
+    width: 22%;
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
     border-style: groove;
     border-color: rgba(138, 137, 137, 0.212);
@@ -48,62 +59,30 @@ footer {
     color: rgba(50, 52, 53, 0.749);
 }
 
-/* What is this?*/
-#personlabel{
-    background-color: rgb(146, 21, 21);
-}
-
-#navbarcontainer {
-    position: relative;
-    display: inline-block;
-    right: 22%;
-    margin-top: 100px;
-    background-color: rgba(45, 48, 50, 0.749);
-    padding: 1.5em;
-    padding-bottom: 0px;
-    width: 33%;
-}
-
-#linkcontainer {
-    text-align: left;
-}
-
-.navbarlinks {
-    text-decoration: none;
-    color: rgba(183, 192, 192, 0.904);
-    padding: 0.25em;
-}
-
-.navbarlinks:hover {
-    color: rgb(237, 245, 245);
-}
-
 #socialmediacontainer {
     position: relative;
     display: inline-block;
-    left: 150%;
+    left: 30%;
 }
 
 .socialmediaimgs {
-    padding: 2px;
+    padding: 1px;
 }
 
-#addbutton {
+#loginbutton {
     position: relative;
     display:inline-block;
-    margin-top: 5em;
-    padding-left: 5em;
-    padding-right: 5em;
+    margin-top: 3em;
+    padding-left: 3.0em;
+    padding-right: 3.0em;
     padding-top: 1.0em;
     padding-bottom: 1.0em;
-    color: rgba(88, 86, 86, 0.758);
+    color: rgba(82, 80, 80, 0.884);
     background-color: #20ce0dbf;
     border-radius: 7px;
     border: 0em;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bolder;
-    
-
 }
 
 #addbutton:hover {
@@ -115,16 +94,11 @@ footer {
     color: rgba(60, 59, 59, 0.575);
     font-size: small;
     padding: 0.5em;
-    border-color: rgba(205, 206, 206, 0.537);
+    /*border-color: rgba(205, 206, 206, 0.235);*/
     
 }
-
-#textinputname {
-    margin-right: 5px;
-}
-
-#textinputage {
-    margin-left: 5px;
+#textinputusername {
+    margin-bottom: 1em;
 }
 
 #formborder {
@@ -135,18 +109,7 @@ footer {
     width: 70%;
     border-style: solid;
     border-width: 0.1px;
-    border-color: rgba(172, 172, 172, 0.326);
-}
-
-#stripeeffect {
-    position: relative;
-    display: block;
-    border-style: groove;
-    border-color: rgba(162, 162, 162, 0.162);
-    border-width: 1px;
-    width: 20%;
-    left: 80em;
-    margin-top: 1.5em;
+    border-color: rgba(172, 172, 172, 0.345);
 }
 
 .miscfootercontent {
@@ -154,5 +117,72 @@ footer {
     display: inline-block;
     left: 30em;
     font-size: smaller;
-    padding-left: 5em;
+    padding-left: 2.5em;
+}
+
+div > #langfooterdetails {
+position: relative;
+display: block;
+left: 12.8em;
+}
+
+#resetpassword {
+    position: relative;
+    display: block;
+    top: 0.5em;
+    color: blue;
+}
+
+#mypagelink {
+    color: greenyellow;
+}
+
+#loggedinlistitems {
+    color: aqua;
+}
+
+.navbarlinks {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: rgba(183, 192, 192, 0.92);
+    padding: 1px;
+}
+
+.navbarlinks:hover {
+    color: rgb(237, 245, 245);
+}
+
+ul {
+    position: relative;
+    display: block;
+    left: -15px;
+    list-style: none;
+}
+
+#signuplink {
+    position: relative;
+    display: block;
+    left: 0;
+    font-size: x-small;
+    color:rgb(15, 231, 76);
+}
+
+#companycontainer {
+    position: relative;
+    display:inline-block;
+    top: 8em;
+    left: 15em;
+}
+
+#companyname {
+    position: relative;
+    display: block;
+    color:rgb(24, 17, 210);
+}
+
+.pagecontent {
+    position: relative;
+    top: 5em;
+    font-size: small;
 }
