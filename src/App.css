@@ -1,7 +1,7 @@
 body {
     display: block;
     overflow-y: scroll;
-    padding-bottom: 20%;
+    padding-bottom: 40%;
     background-color: rgba(212, 195, 195, 0.199);
     color: rgba(36, 36, 35, 0.781);
     text-align: center;
@@ -50,9 +50,10 @@ h1, h2 {
 footer {
     position:fixed;
     bottom: 0;
+    display: block;
     width: 100%;
-    background-color: rgba(92, 93, 94, 0.505);
-    color:  rgba(232, 232, 232, 0.783);
+    background-color: rgba(186, 186, 186, 0.495);
+    color:  rgba(73, 73, 73, 0.897);
     padding: 1em;
     font-size: small;
 }
@@ -68,12 +69,16 @@ footer {
 
 #socialmediacontainer {
     position: relative;
-    display: inline-block;
-    left: 30%;
+    display: inline-flex;
+    left: 32%;
+    border-left: 2px solid rgba(123, 123, 123, 0.523);
+    padding-left: 20px;
 }
 
 .socialmediaimgs {
+    position: relative;
     padding: 1px;
+    top: 8px;
 }
 .buttongeneral {
     position: relative;
@@ -135,16 +140,15 @@ footer {
 
 .miscfootercontent {
     position: relative;
-    display: inline-block;
-    left: 30em;
+    left: 75em;
+    text-align: left;
     font-size: smaller;
     padding-left: 2.5em;
 }
 
-div > #langfooterdetails {
+#langfooterdetails {
 position: relative;
-display: block;
-left: 12.8em;
+left: 65em;
 }
 
 #resetpassword {
@@ -156,10 +160,6 @@ left: 12.8em;
 
 #mypagelink {
     color: greenyellow;
-}
-
-#loggedinlistitems {
-    color: aqua;
 }
 
 .navbarlinks {
@@ -193,12 +193,7 @@ ul {
     position: relative;
     display:inline-block;
     left: 15em;
-}
-
-#companyname {
-    position: relative;
-    display: block;
-    color:rgba(53, 156, 156, 0.993);
+    top: 100px;
 }
 
 .pagecontent {
@@ -224,31 +219,18 @@ ul {
     left: 19px;
 }
 
-#userspecificnav {
-    position: relative;
-    display:block;
-    text-align: left;
-
-    /*background-color: rgba(223, 215, 222, 0.315);*/
-    /*border-radius: 10px;*/
-    width: fit-content;
-    /*border-bottom: 0.5px solid gainsboro;*/
-    /*border-top: 0.5px solid gainsboro;*/
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    border-right: 0.5px solid rgba(197, 197, 197, 0.699);
-    margin-left: 25px;
-}
-
 .userspeclinks {
     position: relative;
     display: block;
     text-decoration: none;
-    color: rgb(35, 35, 35);
-    background-color: #ebebeb;
+    color: rgb(230, 230, 230);
     padding: 5px;
     margin: 0.5em;
-    border-radius: 10px;
+    border-radius: 7px;
+}
+
+.userspeclinks:hover {
+    background-color: #535353;
 }
 
 .loggedinpagelayout {
@@ -279,19 +261,10 @@ ul {
     border-radius: 3px;
 }
 
-#hamburger {
-    position: relative;
-    display: block;
-    cursor:pointer;
-    width: fit-content;
-    left: 20px;
-    margin-top: 10px;
-}
-
 #logoutbtn {
     position: relative;
     display: flex;
-    margin-left: 1.5em;
+    left: 75%;
     background-color: rgb(211, 46, 46);
     width: fit-content;
     padding: 2px;
@@ -300,7 +273,7 @@ ul {
 
 #settingspanel {
     background-color: rgb(229, 230, 231);
-    border-radius: 10px;
+    
     width: 75%;
     padding-top: 1em;
     padding-bottom: 1em;
@@ -310,43 +283,32 @@ ul {
     position: relative;
     display: flex;
     text-decoration: none;
-    color: gainsboro;
-    background-color: slategrey;
+    color: rgb(81, 81, 81);
     margin: 10px;
     border-radius: 10px;
     padding: 7px;
 }
 
-#darkbuttonouter {
-    position: relative;
-    display: inline-flex;
-    left: 40em;
-    padding: 8px 24px ;
-    background-color: rgb(81, 81, 81);
-    border-radius: 10px;
-}
-
-#darkbuttonouter:hover {
-    cursor: pointer;
-}
-
-#darkbuttonouter > :first-child {
+#darkbuttonouter{
     position: absolute;
     display: inline-flex;
-    background-color: rgb(98, 101, 101);
+    background-color: red; 
     padding: 5px 15px;
-    width: 10%;
-    left: 25px;
+    left: 44em;
+    border-radius: 10px;
 }
 
-#darkbuttonouter > :last-child {
-
-    position: relative;
-    display: inline-flex;
-
-    padding: 6px 15px;
-    background-color: red;
+#statechanger{
+    position: absolute;
+    display: inline-block;
+    padding: 5px 10px;
+    left: 44em;
+    background-color: rgb(118, 118, 118);
     border-radius: 10px;
+}
+
+#statechanger:hover {
+    cursor: pointer;
 }
 
 #darkmodetext {
@@ -354,10 +316,191 @@ ul {
     display: flex;
     left: 40.5em;
     color: rgb(98, 111, 125);
+    margin-bottom: 2px;
 }
 
 #passwordinfo {
     top: -3.7em;
     margin-left: 2em;
 }
+
+footer > div > a {
+    color: rgba(78, 78, 78, 0.897);;
+    position: relative;
+    display: inline-flex;
+    right: 25%;
+    top: 1em;
+    margin-left: 10px;
+    font-size: smaller;
+}
+
+.altdroplinks{
+    position: relative;
+    display: block;
+    color:lightgrey;
+    text-decoration: none;
+}
+
+.altdroplinks:hover {
+    color: rgb(240, 240, 240);
+}
+
+.nav-dropdown {
+    margin: 0 auto;  
+    height: 0; /* Hides the drop down */ 
+    overflow: hidden;
+    text-align:left;  
+    padding: 0;  
+    border-top: 0;
+    width: 500px;
+    background:#333;
+    color: #f2f2f2;
+    -webkit-border-bottom-right-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom: 0;
+    max-height:0px;
+}
+
+#main-nav #hamburger:hover .nav-dropdown {
+    height:auto;
+    z-index: 11; 
+    max-height:200px;
+    position: relative;
+    left: 45%;
+    transition-property: all;
+    transition-duration: 1.0s;
+    border-bottom: 10px solid #25272a;
+}
+
+#alt-nav #arrowdropdown:hover .nav-dropdown
+{
+    height:auto;
+    z-index: 11; 
+    max-height:200px;
+    transition-property: all;
+    transition-duration: 1.5s;
+    border-bottom: 10px solid #25272a;
+}
+
+#arrowdropdown {
+    position: fixed;
+    display:inline;
+    max-width: fit-content;
+    top: 10px;
+    cursor: pointer; 
+}
+
+#hamburger {
+    position: fixed;
+    display: inline;
+    cursor:pointer;
+    width:fit-content;
+    top: 10px;
+    right: 650px;
+}
+
+#navbarbackdrop {
+    position: fixed;
+    display: inline;
+    top: 0;
+    width: 80%;
+    left: 20%;
+    background-color: rgba(86, 227, 97, 0.897);
+    z-index: 1;
+    padding: 1px;
+    border-bottom-left-radius: 10px;
+}
+
+.leftbackground {
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 25%;
+    width: 15%;
+    height: 100%;
+    background-color: rgb(100, 100, 100);
+    border-top-right-radius: 10px;
+    border: 1.5px solid rgb(75, 75, 75);
+}
+.leftbackground > ul {
+    position: absolute;
+    display: block;
+    background-color: rgb(137, 137, 137);
+    width: 88%;
+    text-align:left;
+    border-right:2px solid rgb(193, 193, 193);
+    border-radius: 2.5px;
+}
+
+.leftbackground > ul > li {
+    position: relative;
+    display: block;
+    padding: 5px 20px 5px 20px;
+    margin: 2px;
+    color: rgb(255, 255, 255);
+    font-weight: normal;
+}
+
+.leftbackground > ul > li:hover {
+    background-color: #a9a9a9;
+    border-radius: 7px;
+    cursor: pointer;
+    transition-duration: 1.0s;
+    width: fit-content;
+}
+
+#headerbuttons {
+    position: absolute;
+}
+
+#headerbuttons > ul {
+    position: absolute;
+    display: inline-flex;
+    left: 150px;
+    width: fit-content;
+}
+
+#headerbuttons > ul > li {
+    position: relative;
+    font-weight: bold;
+    font-size: medium;
+    margin-left: 20px;
+    padding: 10px;
+    bottom: 20px;
+}
+
+#headerbuttons > ul > li:hover {
+    position: relative;
+    background-color: #a4aba458;
+    border-radius: 7px;
+    cursor: pointer;
+    transition-duration: 0.7s;
+}
+
+#userlogo {
+    position: fixed;
+    right: 15%;
+    z-index: 20;
+    top: 10px;
+}
+
+#userlogo:hover {
+    cursor: pointer;
+}
+
+#navbarbackdrop > input {
+    display: inline;
+    position: relative;
+    left: 200px;
+    background-color: #dedcdc;
+    color: #5c5c5c;
+    border-color:rgb(193, 193, 193);
+    padding: 4px;
+    bottom: 2px;
+}
+
 

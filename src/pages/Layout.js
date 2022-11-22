@@ -1,5 +1,6 @@
 import { Outlet, Link } from "react-router-dom";
 import {useState} from 'react';
+import Defaultfooter from '../Defaultfooter';
 
 const Layout = () => {
 
@@ -48,9 +49,9 @@ const Layout = () => {
                     </li>
                 </ul>
             </nav>
-
-            <Outlet /> 
+            <Outlet />
             
+           <Defaultfooter />
         </>
     );
 }

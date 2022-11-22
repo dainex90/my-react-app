@@ -3,25 +3,33 @@
 const Accountsettings = () => {
 
     
-
     const changeDarkModeState = (event) => 
     {
-        var stateChanger = document.getElementById("statechanger");
+        let darkbuttonouter = document.getElementById("darkbuttonouter");
+        let stateChanger = document.getElementById("statechanger");
         // change the dark mode state to default or dark..
-        if (stateChanger.style.backgroundColor == "red")
+        if (stateChanger.style.left == "44em")
         {
-            stateChanger.style.backgroundColor = "yellowgreen";
-            stateChanger.style.left = "10px";
+            darkbuttonouter.style.backgroundColor = "rgba(93, 237, 105, 0.852)";
+            stateChanger.style.left = "44.7em";
             document.body.style.backgroundColor = "rgba(50, 50, 50)";
             document.body.style.color = "azure";
+            
         }
 
         else
         {
-            stateChanger.style.backgroundColor = "red";
-            stateChanger.style.left = "0px";
+            darkbuttonouter.style.backgroundColor = "red";
+            stateChanger.style.left = "44em";
             document.body.style.backgroundColor = "rgba(212, 195, 195, 0.199)";
             document.body.style.color = "rgba(36, 36, 35, 0.781)";
+        }
+    }
+
+    function navbarColorSwitch(collection, color)
+    {
+        for (let index = 0; index < collection.length; index++) {
+            collection[index].style.color = color;
         }
     }
 
@@ -45,12 +53,12 @@ const Accountsettings = () => {
                         </li>
                         <div id="darkmodetext"> Darkside
                         </div>
-                        <li id="darkbuttonouter">
-                            <div>
-                            </div>
-                            <div id="statechanger" onClick={e => changeDarkModeState(e)}>
-                            </div>
-                        </li>
+                        
+                        <div id="darkbuttonouter">
+                        </div>
+                        <div id="statechanger" onClick={e => changeDarkModeState(e)}>
+                        </div>
+                        
                     </ul>
                 </nav>
             </div>

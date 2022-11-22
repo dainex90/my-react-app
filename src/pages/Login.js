@@ -10,7 +10,6 @@ import About from './About';
 const Login = () => {
 
   // login states
-
   const [userName, setUserName] = useState("Username or Email");
   const [password, setPassword] = useState("Password");
 
@@ -40,7 +39,7 @@ const Login = () => {
         welcomeMsg.innerHTML = `Welcome ${userName}`;
         document.body.appendChild(welcomeMsg);
 
-        return <About />;
+        <Loggedinlayout />;
       }
     }
 

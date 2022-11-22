@@ -14,9 +14,6 @@ import Media from './pages/Media';
 import Accountsettings from './pages/Accountsettings';
 import Loggedinlayout  from './pages/Loggedinlayout';
 
-import InstagramImg from './logo_instagram.png';
-import FacebookImg from './Facebook_logo.png';
-import YouTubeLogo from './youtube_logo.png';
 import Explore from './pages/Explore';
 
 
@@ -40,23 +37,11 @@ export default function MainApp() {
   return (
     <>
     <div id='companycontainer'>
-      <h1 id='companyname'> <span style={{fontSize: '65px', fontFamily: 'cursive', color: 'rgba(53, 156, 156, 0.993)'}}>O</span>i</h1>
-      <h1 id='slogan'>Come, connect, <span style={{color: 'darkgray'}}>go.</span></h1>
+      <h1 id='slogan'>Come, connect, <span style={{fontFamily: 'cursive', color: 'rgba(86, 227, 97, 0.700)'}}>go</span></h1>
     </div>
-          <div id='socialmediacontainer'>
-            <a href='https://www.facebook.com/' className='socialmediaimgs'>
-              <img src={FacebookImg} alt="Facebook" width='30px' height='30px'/>
-            </a>
-            <a href='https://www.instagram.com/' className='socialmediaimgs'>
-              <img src={InstagramImg} alt="Instagram" width='30px' height='30px' />
-            </a>
-            <a href='https://www.youtube.com/' className='socialmediaimgs'>
-              <img src={YouTubeLogo} alt="Youtube" width="50px" height="50px" style={{position: 'absolute'}} />
-            </a>
-          </div>
+          
      <BrowserRouter>
       <Routes>
-
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
@@ -75,17 +60,6 @@ export default function MainApp() {
         </Route>
       </Routes>
     </BrowserRouter>
-      <footer>
-        <div id='footertextmain'>
-          All Rights reserved.
-        </div>
-        <div>
-          <div className='miscfootercontent'>Phoenix, AZ, U.S.</div>
-          <div className='miscfootercontent'>Cookies enabled</div>
-          <div className='miscfootercontent'>for questions, Contact @ info.special@gmail.com</div>
-          <div className='miscfootercontent' id='langfooterdetails'> en, rus, esp, ger</div>
-        </div>
-      </footer>
   </>
   );
 }

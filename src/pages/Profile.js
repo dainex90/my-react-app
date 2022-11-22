@@ -12,7 +12,16 @@ function Profile(){
                 
             </div>
         </div>
-        </>  
+        <div className="leftbackground" id="leftbackground">
+            <ul>
+                <li>Folders</li>
+                <li>Personal</li>
+                <li>My Area</li>
+                <br></br>
+                <li>Back</li>
+            </ul>
+        </div>
+    </>  
     );
 }
 
