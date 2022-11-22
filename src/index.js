@@ -10,11 +10,14 @@ import About from './pages/About';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Profile from './pages/Profile';
-import InvalidInput from './InvalidInput';
+import Media from './pages/Media';
+import Accountsettings from './pages/Accountsettings';
+import Loggedinlayout  from './pages/Loggedinlayout';
 
 import InstagramImg from './logo_instagram.png';
 import FacebookImg from './Facebook_logo.png';
 import YouTubeLogo from './youtube_logo.png';
+import Explore from './pages/Explore';
 
 
 
@@ -37,7 +40,7 @@ export default function MainApp() {
   return (
     <>
     <div id='companycontainer'>
-      <h1 id='companyname'> <span style={{fontSize: '65px', fontStyle: 'oblique'}}>o</span>rion</h1>
+      <h1 id='companyname'> <span style={{fontSize: '65px', fontFamily: 'cursive', color: 'rgba(53, 156, 156, 0.993)'}}>O</span>i</h1>
       <h1 id='slogan'>Come, connect, <span style={{color: 'darkgray'}}>go.</span></h1>
     </div>
           <div id='socialmediacontainer'>
@@ -53,6 +56,7 @@ export default function MainApp() {
           </div>
      <BrowserRouter>
       <Routes>
+
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
@@ -60,7 +64,14 @@ export default function MainApp() {
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<Signup />} />
           <Route path="*" element={<NoPage />} />
-          <Route path="profile" element={<Profile />} />
+        </Route>
+
+        <Route path="/" element={<Loggedinlayout />}>
+          <Route path='profile' element={<Profile />} />
+          <Route path="media" element={<Media />} />
+          <Route path="accountsettings" element={<Accountsettings />} />
+          <Route path="explore" element={<Explore />} />
+          <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

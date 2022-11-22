@@ -1,6 +1,11 @@
 import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
+import { Outlet, Link } from "react-router-dom";
 import Profile from './Profile';
+import removePlaceholderText from '../formconfig';
+import { hasSelectionSupport } from '@testing-library/user-event/dist/utils';
+import Loggedinlayout from './Loggedinlayout';
+import { render } from '@testing-library/react';
+import About from './About';
 
 const Login = () => {
 
@@ -8,10 +13,9 @@ const Login = () => {
 
   const [userName, setUserName] = useState("Username or Email");
   const [password, setPassword] = useState("Password");
-  const [id, setId] = useState(5);
 
   // list with registered users 
-  const registeredUsers = [ 
+    const registeredUsers = [ 
     {id: 1 ,userName : "raich78", password: '12345'},
     {id: 2, userName: "SandyHandy", password: '54321'},
     {id: 3, userName: "zelda92", password: '7362512'},
@@ -21,72 +25,59 @@ const Login = () => {
   // event handlers
   const loginUser = () =>
   {
+    let isRegistered = false;
     // do some business logic here. do the person exist in the db?
-    
     for (let index = 0; index < registeredUsers.length; index++) {
       const element = registeredUsers[index];
       if (userName == element.userName && password == element.password)
       {
-        // user CAN login ->
-        alert("WELCOME!");
+        isRegistered = true;
 
-        removeElementById('signinform');
-        removeElementById('mainnavlist');
-        const li = document.createElement("li");
-        const li2 = document.createElement("li");
-        const li3 = document.createElement("li");
-        const li4 = document.createElement("li");
-
-        li.innerHTML =  `<Link to="/profile" className="navbarlinks">Profile</Link>`;
-        li2.innerHTML = `<Link to="/account" className="loggedinlistitems">My Account</Link>`;
-        li3.innerHTML = `<Link to="/settings"className="loggedinlistitems">Settings</Link>`;
-        li4.innerHTML = `<Link to="/explore" className="loggedinlistitems">Explore</Link>`;
-
-        const newUl = document.createElement("ul");
-        newUl.setAttribute("id","mainnavlist");
-        newUl.appendChild(li);
-        newUl.appendChild(li2);
-        newUl.appendChild(li3);
-        newUl.appendChild(li4);        
-
-        const nav = document.getElementById('linkcontainer');
-        nav.appendChild(newUl);
+        // user are logged-in:
+        alert("WELCOME!");      
 
         const welcomeMsg = document.createElement("h1");
         welcomeMsg.innerHTML = `Welcome ${userName}`;
         document.body.appendChild(welcomeMsg);
 
-        <Profile />
+        return <About />;
+      }
     }
-    }
-  }
 
-  function removePlaceholderText(e)
-  {
-    if (e.target.value == "Username or Email" || e.target.value == "Password")
+    if (!isRegistered)
     {
-      e.target.value = "";
+      for (let index = 0; index < 1000000000; index++) {
+        // simulate a server request delay
+      }
+      document.getElementById("formborder").innerHTML = "Invalid username/Email or password, try again!";
     }
-  };
-
-  function removeElementById (element){
-    document.getElementById(element).remove();
   }
 
+  document.body.addEventListener("click", () => {
+    if (password == "")
+    {
+      setPassword("Password");
+    }
+
+    if (userName == "")
+    {
+      setUserName("Username or Email");
+    }
+  });
     return (
       <>
       <div>
-        <form id='signinform'>
+        <form id='loginform' className='formgeneral'>
           <label> 
           <input  id='textinputusername'
-                  className='textinput'
+                  className='logintextinput'
                   type="text"
                   value={userName}
                   onChange={e => setUserName(e.target.value)}
                   onClick={e => removePlaceholderText(e)}
           />
           <input  id='textinputpassword'
-                  className='textinput'
+                  className='logintextinput'
                   type="text"
                   value={password}
                   onChange={e => setPassword(e.target.value)}
@@ -95,13 +86,14 @@ const Login = () => {
           <div id='formborder'></div>
           <div>
           <input id='loginbutton'
+                className='buttongeneral'
                 type="button" 
                 value="Log in"
                 onClick={loginUser}     
           />
             <Link to="/resetpassword" id="resetpassword">forgot password? click here</Link>
           </div>
-          
+
           </label>
         </form>
       </div>
@@ -110,3 +102,4 @@ const Login = () => {
   };
   
   export default Login;
+

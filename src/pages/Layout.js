@@ -1,5 +1,6 @@
 import { Outlet, Link } from "react-router-dom";
 import {useState} from 'react';
+
 const Layout = () => {
 
     // Login-button effect
@@ -10,7 +11,7 @@ const Layout = () => {
         position: 'relative',
         display: 'inline-block',
         color: 'white',
-        backgroundColor: isHover ? 'rgba(0, 255, 255, 0.863': 'darkgrey',
+        backgroundColor: isHover ? 'rgba(53, 156, 156, 0.955)': 'gray',
         padding: '0.5em',
         borderRadius: '5px',
         textDecoration: 'none',
